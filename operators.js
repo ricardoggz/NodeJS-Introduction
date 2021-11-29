@@ -91,8 +91,21 @@ console.log(number);
 //operadores lógicos:
 //and &&, or ||, not !
 //and
-console.log(3 < 5 && 5 > 10); //false 
+console.log(3 < 5 && 5 > 10); //false
 //or
-console.log(true||true);//true
+console.log(true || true); //true
 //not
-console.log(!true);//false
+console.log(!true); //false
+
+//operador de cadena o concatenación para strings : "+"
+var nombre = "José";
+var apellido = "Guzmán";
+
+var nombrecompleto = nombre + " " + apellido;
+console.log(nombrecompleto);
+
+//operador condicional
+console.log(2 < 3 ? true : false);
+
+
+
