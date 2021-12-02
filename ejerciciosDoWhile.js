@@ -21,7 +21,7 @@
 }
 
 {
-  //tabla del 3:
+  //tabla del 4:
   let i = 0;
   do {
     i = i += 4;
