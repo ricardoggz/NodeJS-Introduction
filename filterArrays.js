@@ -11,13 +11,3 @@ let students = [
     (student) => student.age > 20 && student.size > 1.71
   );
   console.log(filtrado);
-  
-  //
-  const ovejas = [
-    { name: "Noa", color: "azul" },
-    { name: "Euge", color: "rojo" },
-    { name: "Navidad", color: "rojo" },
-    { name: "Ki Na Ma", color: "rojo" },
-  ];
-  const filtrarOvejas = ovejas.filter((oveja) => oveja.color === "rojo");
-  console.log(filtrarOvejas);
