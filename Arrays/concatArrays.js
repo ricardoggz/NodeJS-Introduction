@@ -44,6 +44,14 @@
 {
   //removiendo elementos
   let names = ["Ricardo", "José", "Fernando"];
-  names.splice(1, 1, 'Ernesto');
+  names.splice(1, 1, "Ernesto");
   console.log(names);
+}
+
+//slice
+//retorna una copia de una parte más pequeña de nuestro arreglo
+{
+  let names = ["Ricardo", "José", "Fernando"];
+  let resultado = names.slice(1, 2); //no incluye la ultima posicion
+  console.log(resultado);
 }
