@@ -41,3 +41,46 @@ const showUsers = async () => {
   console.log(users);
 };
 showUsers();
+
+//concatenacion de promesas con async - await:
+{
+  const getMovies = (error) =>
+    new Promise((res, rej) => {
+      if (!error) {
+        setTimeout(() => {
+          res([
+            { name: "fast & furious", id: 32 },
+            { name: "avengers", id: 42 },
+            { name: "spiderman", id: 50 },
+          ]);
+        }, 1000);
+      } else {
+        rej("no se pudieron obtener los datos");
+      }
+    });
+
+  const getActors = (error) =>
+    new Promise((res, rej) => {
+      if (!error) {
+        setTimeout(() => {
+          res({ name: "tom holland", age: 23 });
+        }, 1000);
+      } else {
+        rej("no se pudo obtener la información");
+      }
+    });
+
+  //resolviendo la promesa con async - await & try - catch
+
+  const main = async () => {
+    try {
+      let showMovies = await getMovies(false);
+      let showActors = await getActors(false);
+      console.log(showMovies);
+      console.log(showActors);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  main();
+}
