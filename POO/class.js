@@ -1,16 +1,23 @@
 /*
-  Programación orentada a objetos en JavaScript mediante el uso 
+  Programación orientada a objetos en JavaScript mediante el uso 
   de las clases para crear nuevos objetos.
   Utilizaremos la siguiente clase para crear nuevos objetos y 
   acceder a los atributos y métodos:
 */
 
 class Movie  {
-  //El constructor es la función que tendrá nuestros atributos
+  /*
+    El constructor es la función que tendrá nuestros atributos
+    Solo puede utilizarse una vez.
+  */
   constructor(title, year, category){ 
     this.title = title;
     this.year = year;
     this.category = category;
+  }
+  //Agregando un método a nuestra clase:
+  playMovie(){
+    return `Loading ${this.title}...`
   }
 };
 
@@ -24,3 +31,4 @@ const AVENGERS = new Movie(
     principio del encapsulamiento.
   */
 console.log(AVENGERS);
+console.log(AVENGERS.playMovie()); //Ejecutsamos el método de nuestra clase...
