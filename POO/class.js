@@ -1,36 +1,26 @@
-//Programacion orientada a objetos:
-//clases
-//Para definir clases se debe utilizar camel case
-//Las clase se identifican por que contienen propiedades y métodos
+/*
+  Programación orentada a objetos en JavaScript mediante el uso 
+  de las clases para crear nuevos objetos.
+  Utilizaremos la siguiente clase para crear nuevos objetos y 
+  acceder a los atributos y métodos:
+*/
 
-class User {
-  constructor(nombre, apellido, user) {
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this.user = user;
+class Movie  {
+  //El constructor es la función que tendrá nuestros atributos
+  constructor(title, year, category){ 
+    this.title = title;
+    this.year = year;
+    this.category = category;
   }
-}
+};
 
-//así llamaremos a la clase y le pondremos valores al constructor
-const user = new User("Ricardo", "Guevara", "@ricardo_guevarag");
-console.log(user);
-
-//Ejemplo utilizando Get y Set:
-
-class Person {
-  constructor(name, nickname) {
-    this._name = name;
-    this._nickname = nickname;
-  }
-
-  get name() {
-    return this._name;
-  }
-
-  set name(newName) {
-    return (this._name = newName);
-  }
-}
-
-let person = new Person("Ricardo");
-console.log(person.name);
+//Creando un nuevo objeto a partir la clase Movie:
+const AVENGERS = new Movie(
+  "End Game",
+  2021,
+  "Fiction"
+);/*Le pasamos los parámetros al constructor y así
+    podemos crear nuevos objetos, utilizando el
+    principio del encapsulamiento.
+  */
+console.log(AVENGERS);
